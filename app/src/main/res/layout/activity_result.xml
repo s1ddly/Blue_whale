@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.andy.bluewhalechallenge2.MainActivity"
+    android:background="#3c3c3c">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:id="@+id/textView"
+        android:background="#0d9aec"
+        android:text="24 HOUR COUNT DOWN TIMER"
+        android:textColor="#ffffff"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/m_btnInfoID"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Until next task"
+        android:id="@+id/m_sDescriptionID"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:autoText="true"
+        android:textColor="#ffffff" />
+    <ProgressBar
+        android:id="@+id/progress1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/m_sCheckingID" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/m_sCheckingID"
+        android:visibility="invisible"
+        android:id="@+id/m_iCheckID"
+        android:src="@drawable/check" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Checking answer..."
+        android:id="@+id/m_sCheckingID"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="false"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/adView" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/m_btnInfoID"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="15dp"
+        android:src="@android:drawable/ic_dialog_info" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3588586943214333/8701350408">
+    </com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/m_btnInfoID"
+        android:layout_toLeftOf="@+id/m_btnInfoID"
+        android:layout_toStartOf="@+id/m_btnInfoID"
+        android:layout_marginRight="42dp"
+        android:layout_marginEnd="42dp" />
+
+</RelativeLayout>

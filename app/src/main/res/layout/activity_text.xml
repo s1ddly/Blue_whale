@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.andy.bluewhalechallenge2.MainActivity"
+    android:background="#3c3c3c">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task" android:textSize="30dp"
+        android:id="@+id/m_sTaskID"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/m_sQuestionID"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/m_sTaskID"
+        android:layout_marginTop="5dp"
+        android:background="#0d9aec"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="15dp"
+        android:text="Question"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="To Complete, upload text for proof"
+        android:id="@+id/m_sDescriptionID"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND"
+        android:id="@+id/m_bSENDID"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/adView"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:id="@+id/m_tAnswerID"
+        android:layout_below="@+id/m_sDescriptionID"
+        android:layout_alignStart="@+id/m_sQuestionID"
+        android:layout_marginTop="20dp"
+        android:layout_alignEnd="@+id/m_sQuestionID"
+        android:background="#6dc795"
+        android:layout_alignParentEnd="false"
+        android:gravity="top"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:layout_above="@+id/m_bSENDID"
+        android:layout_marginBottom="30dp" />
+
+    <TextView
+        android:id="@+id/m_sProofID"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/m_sDescriptionID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
+        android:background="#0d9aec"
+        android:gravity="center"
+        android:text="Proof"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffffff"
+        android:textSize="14dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/m_btnInfoID"
+        android:src="@android:drawable/ic_dialog_info"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3588586943214333/8701350408">
+    </com.google.android.gms.ads.AdView>
+
+    <Button
+        android:id="@+id/skipbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/m_btnInfoID"
+        android:layout_toStartOf="@+id/m_btnInfoID" />
+
+</RelativeLayout>
